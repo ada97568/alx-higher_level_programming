@@ -25,15 +25,15 @@ last_rom = 0
 list_num = [0]
 
 for ch in roman_string:
-        for r_num in list_keys:
-            if r_num == ch:
-                if rom_n.get(ch) <= last_rom:
-                    num += to_subtract(list_num)
-                    list_num = [rom_n.get(ch)]
-                else:
-                    list_num.append(rom_n.get(ch))
+	for r_num in list_keys:
+		if r_num == ch:
+			if rom_n.get(ch) <= last_rom:
+				num += to_subtract(list_num)
+				list_num = [rom_n.get(ch)]
+			else:
+				list_num.append(rom_n.get(ch))
 
-last_rom = rom_n.get(ch)
+			last_rom = rom_n.get(ch)
 
 num += to_subtract(list_num)
 
